@@ -12,6 +12,10 @@ let isPlaying = false;
 
 const $target = $("#target");
 
+$("#btn").click(() => {
+    location.reload();
+})
+
 $(document).click(() => {
   if (isPlaying === true) {
     return;
