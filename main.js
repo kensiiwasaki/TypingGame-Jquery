@@ -41,16 +41,19 @@ $(document).submit((event) => {
   Game();
 });
 
-
+// 何かしらキーが押された時
 $(document).keydown((e) => {
+// 　画面の先頭の文字と違う文字なら即時リターン
   if (e.key !== word[loc]) {
     return;
   }
 
+//   画面と同じ文字ならテキストを'_'に変更する
   loc++;
 
   $target.text("_".repeat(loc) + word.substring(loc));
 
+//   全て終わったら時間を表示させる
   if (loc === word.length) {
     if (words.length === 0) {
       const elapsedTime = ((Date.now() - startTime) / 1000).toFixed(2);
