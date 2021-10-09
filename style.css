@@ -9,3 +9,8 @@ body {
   letter-spacing: 0.1em;
   user-select: none;
 }
+
+#btn {
+    cursor: pointer;
+    user-select: none;
+}
